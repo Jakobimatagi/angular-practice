@@ -1,0 +1,52 @@
+.calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Creates four columns of equal width */
+  gap: 10px; /* Space between grid items */
+  max-width: 300px; /* Adjust based on your preference */
+  margin: auto; /* Center the calculator */
+}
+
+.calculator input {
+  grid-column: span 4; /* Input spans all 4 columns */
+  padding: 10px;
+  font-size: 1.5rem; /* Larger text for visibility */
+  text-align: right; /* Aligns text to the right */
+}
+
+.calculator button {
+  padding: 15px 0; /* Adds vertical padding */
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Optionally, style the operation buttons differently */
+.calculator button.operation {
+  background-color: #f0ad4e; /* Bootstrap 'btn-warning' color */
+  color: white;
+}
+
+/* Style for the clear and equals buttons */
+.calculator button.clear,
+.calculator button.equals {
+  grid-column: span 2; /* Makes these buttons wider */
+  background-color: #d9534f; /* Bootstrap 'btn-danger' color for clear */
+  color: white;
+}
+
+.calculator button.equals {
+  background-color: #5cb85c; /* Bootstrap 'btn-success' color for equals */
+}

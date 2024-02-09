@@ -1,0 +1,17 @@
+.img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img-content {
+  max-width: 100%;
+  height: auto;
+  max-height: 80%;
+}
