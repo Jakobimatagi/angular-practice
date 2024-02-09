@@ -67,4 +67,15 @@ export class CalculatorComponent {
     }
     return result;
   }
+  performCalculation() {
+    if (this.firstOperand !== null && this.operator && this.currentNumber !== '') {
+      const result = this.calculate();
+      this.currentNumber = String(result);
+      // Reset for a new calculation, or adjust according to how you want the calculator to behave
+      this.firstOperand = result; // Optionally keep the result as the first operand for consecutive calculations
+      this.operator = null;
+      this.waitForSecondNumber = false;
+    }
+  }
+  
 }
